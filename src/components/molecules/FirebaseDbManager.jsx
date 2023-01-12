@@ -75,9 +75,9 @@ export async function FirebaseGoogleLogin({
     _value: _googleId,
     _compOpt: '==',
   });
-  console.log('USER:', user);
+  // console.log('USER:', user);
   if (user) {
-    console.log('isUser?');
+    // console.log('isUser?');
     const idCount = user._snapshot.docChanges.length;
     if (idCount > 1) {
       alert('동일 이메일 계정이 2개 이상 존재합니다. 관리자에게 문의하세요');

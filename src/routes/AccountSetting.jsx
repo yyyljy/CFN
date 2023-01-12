@@ -15,11 +15,22 @@ export default function AccountSetting() {
 
   useEffect(() => {
     getAccount();
+    const mail =
+      '*' * (localStorage.getItem('email').split('@')[0].length - 2) +
+      '@' +
+      localStorage.getItem('email').split('@')[1];
+    console.log('mail:', mail);
   }, [account, user]);
 
   const setChainUser = async () => {
+    const mail =
+      localStorage.getItem('email').substring(0, 2) +
+      '*'.repeat(localStorage.getItem('email').split('@')[0].length - 2) +
+      '@' +
+      localStorage.getItem('email').split('@')[1];
+    // console.log('mail:', mail);
     await crowdfundContract.methods
-      .registUser(localStorage.getItem('email').substring(0, 3))
+      .registUser(mail)
       .send({
         from: account.toString(),
       })
@@ -41,7 +52,6 @@ export default function AccountSetting() {
         _value: localStorage.getItem('email'),
         _compOpt: '==',
       }).then(res => {
-        console.log(res);
         firebaseKey = res.docs[0]._key.path.segments[6];
         if (res.docs[0]._document.data.value.mapValue.fields.metaAddr) {
           metaAddr = res.docs[0]._document.data.value.mapValue.fields.metaAddr;

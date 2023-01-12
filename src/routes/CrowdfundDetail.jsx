@@ -283,7 +283,14 @@ export default function CrowdfundDetail() {
           <Box>
             {response.status > '1' ? (
               <Box my={'10px'}>
-                <Text fontSize={'lg'}>펀드 달성율</Text>
+                <Flex direction={'row'}>
+                  <Text fontSize={'lg'}>펀드 달성율</Text>
+                  <Text fontSize={'lg'} ml={'60px'}>
+                    목표금액
+                  </Text>
+                  <Ether />
+                  {response.targetAmount / 10 ** 18}
+                </Flex>
                 <Progress
                   mt={'10px'}
                   alignSelf={'center'}

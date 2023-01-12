@@ -1080,6 +1080,7 @@ export const rewardABI = [
   },
   {
     inputs: [
+      { internalType: 'address', name: 'userAddr', type: 'address' },
       { internalType: 'string', name: '_filmName', type: 'string' },
       { internalType: 'enum DBContract.eOptions', name: '_opt', type: 'uint8' },
     ],

@@ -77,7 +77,7 @@ export default function FundCard({
     <>
       {filmName ? (
         <Box className="card" fontSize={'md'}>
-          <Box maxHeight={'250px'}>
+          <Box maxHeight={'300px'}>
             <Image borderRadius={'10px'} maxWidth={'240px'} src={imgUrl} />
           </Box>
           <Flex direction={'column'} mx={'3px'} mt={'3px'} lineHeight={8}>

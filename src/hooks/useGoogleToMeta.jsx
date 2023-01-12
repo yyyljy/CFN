@@ -21,7 +21,7 @@ export const useGoogleToWalletAddr = () => {
         _value: localStorage.getItem('email'),
         _compOpt: '==',
       }).then(res => {
-        console.log(res);
+        // console.log(res);
         try {
           setMetaAddr(
             res.docChanges()[0].doc._document.data.value.mapValue.fields

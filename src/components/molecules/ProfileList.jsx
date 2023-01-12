@@ -115,6 +115,9 @@ export default function ProfileList() {
             </Card>
           </Box>
         </Flex>
+        <Box mt={'30px'}>
+          <Text fontSize={'2xl'}>내 NFT</Text>
+        </Box>
       </Box>
     </Box>
   );

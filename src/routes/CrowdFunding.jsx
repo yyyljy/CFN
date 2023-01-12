@@ -10,6 +10,7 @@ import FundCard from 'src/components/molecules/FundCard';
 import { ShiningCard } from 'src/components/atoms/ShiningBorder';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import Ether from 'src/components/atoms/Ether';
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -144,7 +145,10 @@ export default function CrowdFunding() {
                           mx="10px"
                           src={item.imgUrl}
                         />
-                        <Flex direction={'column'}>
+                        <Flex
+                          direction={'column'}
+                          justifyContent={'space-between'}
+                        >
                           <Text maxW={'450px'} fontSize="3xl" m={'5px'}>
                             {`< ${item.filmName.split('__')[0]} >`}
                           </Text>
@@ -162,6 +166,18 @@ export default function CrowdFunding() {
                                 <Box key={index}></Box>
                               )
                             )}
+                          </Box>
+                          <Box
+                            justifySelf={'flex-end'}
+                            alignSelf={'flex-start'}
+                          >
+                            <Flex alignItems={'center'}>
+                              <Text fontSize={'lg'}>
+                                펀드 목표 금액&nbsp;&nbsp;
+                              </Text>
+                              <Ether />
+                              <Text>{item.targetAmount / 10 ** 18}</Text>
+                            </Flex>
                           </Box>
                         </Flex>
                       </Flex>

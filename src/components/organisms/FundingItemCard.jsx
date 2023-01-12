@@ -1,4 +1,4 @@
-import { Box, Flex, Image, Text } from '@chakra-ui/react';
+import { Box, Flex, Image, ListItem, Text } from '@chakra-ui/react';
 import React from 'react';
 import styled from 'styled-components';
 import { FundBtn } from '../atoms/FundingBtn';
@@ -87,7 +87,7 @@ const Angel = styled.div`
   background: linear-gradient(145deg, #ffb83d, #e59b33);
   box-shadow: 5px 5px 10px #d89230, -5px -5px 10px #ffc642;
   width: 300px;
-  height: 400px;
+  height: 450px;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -114,14 +114,24 @@ export default function FundingItemCard({ item, index, filmName, status }) {
 
   return (
     <FundItemCard>
-      <Box w={'300px'} h={'400px'}>
+      <Box w={'300px'} h={'450px'}>
         <Angel>
-          <Box>
+          <Flex direction={'column'} h={'100%'}>
             <Image borderRadius={'15px'} src={video_example}></Image>
             <Flex color={'gray.800'} mt={'10px'} direction="column" pl={'10px'}>
               {item ? item.content.map(str => <li key={str}>{str}</li>) : <></>}
             </Flex>
-          </Box>
+            <Flex
+              flexGrow={1}
+              mx={'10px'}
+              direction={'row'}
+              justifyContent={'space-between'}
+              alignItems={'flex-end'}
+            >
+              <Box fontSize={'md'}>{`발행 : ${item.totalAmount} 개`}</Box>
+              <Box fontSize={'md'}>{`잔여 : ${item.remainAmount} 개`}</Box>
+            </Flex>
+          </Flex>
           <Flex
             direction={'column'}
             alignContent={'center'}
@@ -153,9 +163,7 @@ export default function FundingItemCard({ item, index, filmName, status }) {
                 disabled={true}
               >
                 <Flex justifyContent={'center'} alignItems={'center'}>
-                  <Text color={'white'} className="hover-underline-animation">
-                    펀딩 금액 :{' '}
-                  </Text>
+                  <Text color={'white'}>펀딩 금액 : </Text>
                   &nbsp;
                   <Box alignSelf={'flex-start'}>
                     <Ether />
