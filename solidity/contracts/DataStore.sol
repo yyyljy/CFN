@@ -3,9 +3,20 @@ pragma solidity 0.8.17;
 import "./util.sol";
 
 contract DBContract is UtilContract {
+    address cContractAddr;
     constructor() {
         aCrowdfundList.push(
             sCrowdfund("",address(this),"","",1,eStatus.SUCCESS,0,0,0,0,1,1, new address[](0), new address[](0)));
+    }
+
+    modifier onlyCContract {
+        require(msg.sender == cContractAddr, "ONLY CROWDCONTRACT CALL THIS FUNCTION");
+        _;
+    }
+
+    function setContracts(address _crowdfund)
+     public onlyOwner {
+        cContractAddr = _crowdfund;
     }
 
 /////////////////////////////////////////////

@@ -24,7 +24,7 @@ async function main() {
   );
   await RCont.deployed();
 
-  await DBCont.setContracts(CFCont.address, RCont.address);
+  await DBCont.setContracts(CFCont.address);
   await DBUCont.setContracts(CFCont.address, RCont.address);
 
   console.log('==================================');

@@ -1,20 +1,18 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity 0.8.17;
 import "@openzeppelin/contracts/access/Ownable.sol";
-import "./crowdfund.sol";
-import "./reward.sol";
-import "./util.sol";
+// import "./util.sol";
 
 contract DBUserContract is Ownable{
-    CrowdfundContract public cContract;
-    RewardContract public rContract;
+    // CrowdfundContract public cContract;
+    // RewardContract public rContract;
     address cContractAddr;
     address rContractAddr;
 
     function setContracts(address _crowdfund, address _reward)
      public onlyOwner {
-        cContract = CrowdfundContract(_crowdfund);
-        rContract = RewardContract(_reward);
+        // cContract = CrowdfundContract(_crowdfund);
+        // rContract = RewardContract(_reward);
         cContractAddr = _crowdfund;
         rContractAddr = _reward;
     }

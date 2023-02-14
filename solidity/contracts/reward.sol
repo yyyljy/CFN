@@ -5,7 +5,6 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
 import "./DataStore.sol";
 import "./DataStoreUser.sol";
-import "./crowdfund.sol";
 
 /////////////////////////////////////////////
 ////////////////// REWARD ///////////////////

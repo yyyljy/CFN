@@ -20,15 +20,6 @@ export const DataABI = [
     type: 'event',
   },
   {
-    inputs: [],
-    name: 'cContract',
-    outputs: [
-      { internalType: 'contract CrowdfundContract', name: '', type: 'address' },
-    ],
-    stateMutability: 'view',
-    type: 'function',
-  },
-  {
     inputs: [
       { internalType: 'string', name: '_filmName', type: 'string' },
       { internalType: 'string', name: '_imgUrl', type: 'string' },
@@ -56,26 +47,6 @@ export const DataABI = [
     name: 'changeStatusCrowdfund',
     outputs: [],
     stateMutability: 'nonpayable',
-    type: 'function',
-  },
-  {
-    inputs: [],
-    name: 'getContracts',
-    outputs: [
-      { internalType: 'contract CrowdfundContract', name: '', type: 'address' },
-      { internalType: 'contract RewardContract', name: '', type: 'address' },
-    ],
-    stateMutability: 'view',
-    type: 'function',
-  },
-  {
-    inputs: [],
-    name: 'getContractsAddrs',
-    outputs: [
-      { internalType: 'address', name: '', type: 'address' },
-      { internalType: 'address', name: '', type: 'address' },
-    ],
-    stateMutability: 'view',
     type: 'function',
   },
   {
@@ -351,15 +322,6 @@ export const DataABI = [
     type: 'function',
   },
   {
-    inputs: [],
-    name: 'rContract',
-    outputs: [
-      { internalType: 'contract RewardContract', name: '', type: 'address' },
-    ],
-    stateMutability: 'view',
-    type: 'function',
-  },
-  {
     inputs: [
       { internalType: 'string', name: '_filmName', type: 'string' },
       { internalType: 'uint256', name: '_idx', type: 'uint256' },
@@ -377,10 +339,7 @@ export const DataABI = [
     type: 'function',
   },
   {
-    inputs: [
-      { internalType: 'address', name: '_crowdfund', type: 'address' },
-      { internalType: 'address', name: '_reward', type: 'address' },
-    ],
+    inputs: [{ internalType: 'address', name: '_crowdfund', type: 'address' }],
     name: 'setContracts',
     outputs: [],
     stateMutability: 'nonpayable',
@@ -540,15 +499,6 @@ export const DataUserABI = [
   },
   {
     inputs: [],
-    name: 'cContract',
-    outputs: [
-      { internalType: 'contract CrowdfundContract', name: '', type: 'address' },
-    ],
-    stateMutability: 'view',
-    type: 'function',
-  },
-  {
-    inputs: [],
     name: 'getContractsAddrs',
     outputs: [
       { internalType: 'address', name: '', type: 'address' },
@@ -634,15 +584,6 @@ export const DataUserABI = [
     name: 'pushUserVoteList',
     outputs: [],
     stateMutability: 'nonpayable',
-    type: 'function',
-  },
-  {
-    inputs: [],
-    name: 'rContract',
-    outputs: [
-      { internalType: 'contract RewardContract', name: '', type: 'address' },
-    ],
-    stateMutability: 'view',
     type: 'function',
   },
   {
@@ -917,6 +858,13 @@ export const CFABI = [
   {
     inputs: [{ internalType: 'string', name: '_filmName', type: 'string' }],
     name: 'setCrowdfundStatus',
+    outputs: [],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [{ internalType: 'address', name: '_RewardCont', type: 'address' }],
+    name: 'setRewardCont',
     outputs: [],
     stateMutability: 'nonpayable',
     type: 'function',

@@ -56,18 +56,18 @@ async function makeFundingItem(_filmName) {
 
 async function makeAll() {
   // await makeFundingItem('Wall Street Art__Worry John Bur-Fit');
-  // await makeFundingItem('WIAR__Harry Copter');
-  // await makeFundingItem('Mafia__JY LEE');
-  // await makeFundingItem('Coffee Cafe__Lionel Messi');
-  // await makeFundingItem('Dancing__Ronaldinho');
-  // await makeFundingItem('Before Met You__Sun Ri-Se');
-  // await makeFundingItem('LOVE Spy__Nero Nambul');
-  // await makeFundingItem('연어공주__Salmon Dal-gyal');
-  // await makeFundingItem('불씨에 사랑착__손현빈');
-  // await makeFundingItem('보살 미안 랩소리__BJ풀소유');
-  // await makeFundingItem('야수가 미녀__김지킬');
-  // await makeFundingItem('LA Land__Tae Jin-A');
-  await makeFundingItem('지금 잡으러 갑니다__이지금');
+  await makeFundingItem('WIAR__Harry Copter');
+  await makeFundingItem('Mafia__JY LEE');
+  await makeFundingItem('Coffee Cafe__Lionel Messi');
+  await makeFundingItem('Dancing__Ronaldinho');
+  await makeFundingItem('Before Met You__Sun Ri-Se');
+  await makeFundingItem('LOVE Spy__Nero Nambul');
+  await makeFundingItem('연어공주__Salmon Dal-gyal');
+  await makeFundingItem('불씨에 사랑착__손현빈');
+  await makeFundingItem('보살 미안 랩소리__BJ풀소유');
+  await makeFundingItem('야수가 미녀__김지킬');
+  await makeFundingItem('LA Land__Tae Jin-A');
+  // await makeFundingItem('지금 잡으러 갑니다__이지금');
 }
 
 makeAll().catch(error => {

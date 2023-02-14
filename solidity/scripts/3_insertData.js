@@ -47,10 +47,10 @@ async function insertTestData() {
     'https://gateway.pinata.cloud/ipfs/QmeizXq32ih3HtTvDLoN6U3wPQGG1V18xrWset2wfLS168/We Are Wizard.png',
     '마법사 : 물의 길. 세상을 위협하는 악의 무리를 막기 위해 네 명의 마법사가 모였다. 어느날 갑자기 안개로 뒤덮혀버린 뉴욕. 어둠이 찾아오고 종말의 분위기가 형성되자 온갖 범죄가 들끓기 시작한다. 안개의 원인은 무엇이며, 누가 꾸민 짓인가. 인류를 지키려는 네 명의 마법사는 팀을 이뤄 활동하게 되는데.',
     ethers.utils.parseEther('3'),
-    getTimeAfter(86400 * 30),
-    getTimeAfter(86400 * 31),
-    getTimeAfter(86400 * 32),
-    getTimeAfter(86400 * 33),
+    getTimeAfter(86400 * 300),
+    getTimeAfter(86400 * 310),
+    getTimeAfter(86400 * 320),
+    getTimeAfter(86400 * 330),
     { value: ethers.utils.parseEther('0.001') }
   );
 
@@ -64,7 +64,7 @@ async function insertTestData() {
     '눈물과 감동의 마피아 스토리!!! 이정윤 감독의 첫 작품!!! 꿀잼 보장!!',
     ethers.utils.parseEther('5'),
     getTimeAfter(-60),
-    '1673600400',
+    '2000000000',
     '2100000000',
     '2200000000',
     { value: ethers.utils.parseEther('0.001') }
@@ -76,7 +76,7 @@ async function insertTestData() {
     '최정상에 오르기 위한 바리스타의 눈물 나는 노력!!! 리오넬 메시가 간다!! 감독의 첫 작품. 꿀잼 보장!!',
     ethers.utils.parseEther('0.5'),
     '1672422458',
-    '1673710400',
+    '2000000000',
     '2100000000',
     '2200000000',
     { value: ethers.utils.parseEther('0.001') }
@@ -88,7 +88,7 @@ async function insertTestData() {
     '필드 위의 댄서!! 호나우지뉴의 귀환!!! 2022 최고의 코믹 댄싱 영화!! 리오넬 메시가 간다!! 감독의 첫 작품!!! 꿀잼 보장!!',
     ethers.utils.parseEther('10'),
     '1672422458',
-    '1673850400',
+    '2000000000',
     '2100000000',
     '2200000000',
     { value: ethers.utils.parseEther('0.001') }
@@ -100,7 +100,7 @@ async function insertTestData() {
     '해가 뜨기 전 널 만나지 말았어야 했어. 공포 스릴러 영화 전문 선 라이 즈 감독의 세번째 작품. 무더운 여름 타오르는 태양이 뜨기 전에 우리의 만남은 시작됐다. 의문의 폭발과 비좁은 골목에서의 추격전. 그러나 진정한 공포는 해가 뜨고 시작된다.',
     ethers.utils.parseEther('3'),
     '1672422458',
-    '1674000400',
+    '2000000000',
     '2100000000',
     '2200000000',
     { value: ethers.utils.parseEther('0.001') }
@@ -112,7 +112,7 @@ async function insertTestData() {
     '내가하면 불륜 스파이가 하면 로맨스! 네로 남블 감독의 첫 19금 액션 로맨스 영화. 작전 중 우연히 마주한 격투기 선수와의 스파링. 그 안에서 피어나는 사랑! 예측불허 본격 러브 로맨스!! 좌충우돌 스파이의 사랑이야기',
     ethers.utils.parseEther('0.15'),
     '1672422458',
-    '1700600400',
+    '2000000000',
     '2100000000',
     '2200000000',
     { value: ethers.utils.parseEther('0.001') }
@@ -178,7 +178,7 @@ async function insertTestData() {
     getTimeAfter(-60),
     getTimeAfter(30),
     getTimeAfter(120),
-    '1673600400',
+    '1683600400',
     { value: ethers.utils.parseEther('0.001') }
   );
 

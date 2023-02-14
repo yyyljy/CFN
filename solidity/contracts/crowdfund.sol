@@ -11,18 +11,26 @@ pragma solidity 0.8.17;
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "./DataStore.sol";
 import "./DataStoreUser.sol";
+import "./reward.sol";
 
 contract CrowdfundContract is Ownable {
     DBContract DBCont;
     address DBContAddr;
     DBUserContract DBUserCont;
     address DBUserContAddr;
+    RewardContract RewardCont;
+    address RewardContAddr;
 
     constructor(address _DBCont, address _DBUserCont) {
         DBCont = DBContract(_DBCont);
         DBContAddr = _DBCont;
         DBUserCont = DBUserContract(_DBUserCont);
         DBUserContAddr = _DBUserCont;
+    }
+
+    function setRewardCont(address _RewardCont) public onlyOwner {
+        RewardContAddr = _RewardCont;
+        RewardCont = RewardContract(_RewardCont);
     }
     
     modifier isCrowdfundExist(string memory _filmName) {
@@ -140,7 +148,7 @@ contract CrowdfundContract is Ownable {
         DBUserCont.pushUserFundedList(msg.sender, _filmName);
         DBCont.subRemainItemAmount(_filmName, _itemIndex, _amount);
 
-        DBCont.rContract().mintReward(msg.sender, _filmName,DBContract.eOptions.IMG_NFT);
+        RewardCont.mintReward(msg.sender, _filmName,DBContract.eOptions.IMG_NFT);
     }
 
     function getTotalPriceByFilmName(string memory _filmName)
